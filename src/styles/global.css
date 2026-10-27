@@ -1,0 +1,59 @@
+:root {
+  --accent: #e95420;
+  --accent-hover: #c74618;
+  --taskbar-bg: rgba(23, 23, 28, 0.85);
+  --surface: #f2f2f2;
+  --surface-translucent: rgba(26, 26, 29, 0.7);
+  --text-dark: #18181b;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+  --shadow-window: 0 28px 60px rgba(0, 0, 0, 0.42);
+  --shadow-flyout: 0 18px 38px rgba(0, 0, 0, 0.35);
+  font-family: 'Ubuntu', 'Noto Sans', 'Segoe UI', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+body {
+  color: #fff;
+  background: #0e1013;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: rgba(233, 84, 32, 0.45);
+}
+
+a {
+  color: inherit;
+}
+
+.scrollable::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
