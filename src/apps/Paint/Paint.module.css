@@ -1,0 +1,225 @@
+.paint {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background: #e9e8e7;
+  color: #242424;
+}
+
+.toolbar {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  padding: 8px 12px;
+  border-bottom: 1px solid #d5d3d0;
+  background: #f6f5f4;
+}
+
+.toolGroup,
+.actions,
+.palette {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.toolGroup button,
+.actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: #363532;
+  cursor: pointer;
+}
+
+.toolGroup button:hover,
+.actions button:hover:not(:disabled) {
+  background: #e5e3e1;
+}
+
+.toolGroup .selectedTool {
+  border-color: #b6d2f3;
+  background: #dceafa;
+  color: #1c71d8;
+}
+
+.palette {
+  padding: 0 10px;
+  border-left: 1px solid #deddda;
+  border-right: 1px solid #deddda;
+}
+
+.swatch {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.18);
+  border-radius: 50%;
+  background: var(--swatch);
+  cursor: pointer;
+}
+
+.selectedSwatch {
+  outline: 2px solid #3584e4;
+  outline-offset: 2px;
+}
+
+.customColor {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 28px;
+  margin-left: 3px;
+  color: #4a4947;
+  cursor: pointer;
+}
+
+.customColor input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.sizeControl {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #5e5c59;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.sizeControl input {
+  width: 84px;
+  accent-color: #3584e4;
+}
+
+.sizeValue {
+  width: 18px;
+  color: #242424;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.actions {
+  margin-left: auto;
+  padding-left: 8px;
+  border-left: 1px solid #deddda;
+}
+
+.actions button:disabled {
+  color: #aaa8a5;
+  cursor: default;
+}
+
+.actions .export {
+  width: auto;
+  padding: 0 11px;
+  border-color: #c9c7c4;
+  background: #fff;
+}
+
+.actions .export:hover {
+  background: #f1f0ef;
+}
+
+.canvasArea {
+  display: grid;
+  flex: 1;
+  min-height: 0;
+  place-items: center;
+  padding: 18px;
+  overflow: auto;
+  background-color: #deddda;
+  background-image: radial-gradient(rgba(60, 59, 57, 0.12) 0.7px, transparent 0.7px);
+  background-size: 14px 14px;
+}
+
+.canvasFrame {
+  width: min(100%, 1000px);
+  aspect-ratio: 1000 / 650;
+  flex: 0 0 auto;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+}
+
+.canvasFrame canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 28px;
+  padding: 0 12px;
+  border-top: 1px solid #d5d3d0;
+  background: #f6f5f4;
+  color: #6b6966;
+  font-size: 10px;
+}
+
+.status span:last-child {
+  margin-left: auto;
+}
+
+.status i {
+  margin-right: 4px;
+}
+
+@media (max-width: 700px) {
+  .toolbar {
+    flex-wrap: wrap;
+    gap: 7px;
+    padding: 7px;
+  }
+
+  .palette {
+    padding: 0 7px;
+  }
+
+  .swatch {
+    width: 17px;
+    height: 17px;
+  }
+
+  .sizeControl input {
+    width: 62px;
+  }
+
+  .actions {
+    gap: 0;
+  }
+
+  .actions .export {
+    width: 34px;
+    padding: 0;
+  }
+
+  .actions .export span {
+    display: none;
+  }
+
+  .canvasArea {
+    padding: 10px;
+  }
+}
