@@ -21,7 +21,7 @@ export function WindowManagerProvider({ children }) {
     setFocusedId(id);
   }, []);
 
-  const openWindow = useCallback((id) => {
+  const openWindow = useCallback((id, options = {}) => {
     const meta = appRegistry[id];
     if (!meta) return;
 
@@ -45,6 +45,13 @@ export function WindowManagerProvider({ children }) {
       }
       const offset = (offsetCounter++ % 6) * 24;
       const isFit = !!meta.fit;
+      const screenW = typeof window !== 'undefined' ? window.innerWidth : 1920;
+      const screenH = typeof window !== 'undefined' ? window.innerHeight : 1080;
+      // Default spawn: left 13%, top 12%, width 81%, height 78% — cascade by offset
+      const spawnW = meta.defaultWidth  ?? Math.round(screenW * 0.81);
+      const spawnH = meta.defaultHeight ?? Math.round(screenH * 0.78);
+      const spawnLeft = Math.round(screenW * 0.13) + offset;
+      const spawnTop  = Math.round(screenH * 0.12) + offset;
       return [
         ...prev,
         {
@@ -53,10 +60,11 @@ export function WindowManagerProvider({ children }) {
           minimized: false,
           snapped: null,
           maximized: isFit,
-          top: 90 + offset,
-          left: 90 + offset,
-          width: 640,
-          height: 460,
+          top: spawnTop,
+          left: spawnLeft,
+          width: spawnW,
+          height: spawnH,
+          ...options,
         },
       ];
     });

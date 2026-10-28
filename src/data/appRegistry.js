@@ -21,6 +21,7 @@ export const appRegistry = {
     icon: 'fa-solid fa-file-lines',
     orchis: 'document',
     color: '#dc4b3f',
+    flush: true,
   },
 
   about: {
@@ -30,6 +31,7 @@ export const appRegistry = {
     icon: 'fa-solid fa-user',
     orchis: 'user',
     color: '#4fa8ff',
+    flush: true,
   },
 
   experience: {
@@ -39,6 +41,7 @@ export const appRegistry = {
     icon: 'fa-solid fa-briefcase',
     orchis: 'briefcase',
     color: '#d46a1f',
+    flush: true,
   },
 
   projects: {
@@ -48,6 +51,7 @@ export const appRegistry = {
     icon: 'fa-solid fa-folder',
     orchis: 'folder',
     color: '#dfb620',
+    flush: true,
   },
 
   skills: {
@@ -57,6 +61,7 @@ export const appRegistry = {
     icon: 'fa-solid fa-layer-group',
     orchis: 'layers',
     color: '#7c5cff',
+    flush: true,
   },
 
   certifications: {
@@ -66,6 +71,7 @@ export const appRegistry = {
     icon: 'fa-solid fa-certificate',
     orchis: 'certificate',
     color: '#b98700',
+    flush: true,
   },
 
   contact: {
@@ -75,6 +81,7 @@ export const appRegistry = {
     icon: 'fa-solid fa-envelope-open-text',
     orchis: 'mail',
     color: '#34a853',
+    flush: true,
   },
 
   explorer: {
@@ -116,7 +123,7 @@ export const appRegistry = {
     color: '#e0538a',
   },
 
-  // External links — open in a new tab instead of a window
+  // Profile links — open as in-app profile cards
   github: {
     title: 'GitHub',
     shortLabel: 'GitHub',
@@ -124,7 +131,7 @@ export const appRegistry = {
     icon: 'fa-brands fa-github',
     orchis: 'spark',
     color: '#ffffff',
-    external: profile.github,
+    flush: true,
   },
 
   linkedin: {
@@ -134,7 +141,7 @@ export const appRegistry = {
     icon: 'fa-brands fa-linkedin',
     orchis: 'globe',
     color: '#4fa8ff',
-    external: profile.linkedin,
+    flush: true,
   },
 };
 
@@ -148,6 +155,8 @@ export const desktopIconOrder = [
   'certifications',
   'contact',
   'paint',
+  'github',
+  'linkedin',
 ];
 
 // Favorite applications shown in the overview
