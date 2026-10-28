@@ -37,7 +37,52 @@ export const education = [
   },
 ];
 
-export const projects = [];
+export const projects = [
+  {
+    title: 'TypeGym',
+    description: 'A multiplayer typing race app for people who want to get sharper without it feeling boring.',
+    tech: ['TypeScript', 'Next.js'],
+    detail: '18 stars · 1 fork',
+    link: 'https://github.com/abhaypratap08/TypeGym',
+    live: 'https://typegym-io.vercel.app',
+  },
+  {
+    title: 'Photon',
+    description: 'A lightweight image viewer built with C and SDL2.',
+    tech: ['C', 'SDL2'],
+    detail: '8 stars',
+    link: 'https://github.com/abhaypratap08/ImageViewer_UsingC',
+  },
+  {
+    title: 'LNXX',
+    description: 'A terminal UI trainer for learning Linux and Vim without leaving the terminal.',
+    tech: ['Python', 'TUI'],
+    detail: '4 stars',
+    link: 'https://github.com/abhaypratap08/LNXX',
+  },
+  {
+    title: 'InternX',
+    description: 'An AI-powered internship and job recommendation platform. It analyzes a student\'s resume with an LLM pipeline, builds a structured candidate profile, and ranks opportunities by relevance.',
+    tech: ['Python', 'FastAPI', 'Ollama', 'Gemma', 'Node.js'],
+    detail: '1 star · 1 fork',
+    link: 'https://github.com/abhaypratap08/InternX',
+  },
+  {
+    title: 'IntervueX',
+    description: 'An AI-assisted platform for technical interview preparation.',
+    tech: ['React', 'Next.js', 'Node.js'],
+    detail: '1 star',
+    link: 'https://github.com/abhaypratap08/IntervueX',
+  },
+  {
+    title: 'SIH-WeatherGPT',
+    description: 'An AI weather platform with chat as the main interface. Forked from mbsurya19122004/SIH-WeatherGPT.',
+    tech: ['Java'],
+    detail: 'Smart India Hackathon',
+    link: 'https://github.com/abhaypratap08/SIH-WeatherGPT',
+    live: 'https://sih-weather-gpt.vercel.app',
+  },
+];
 
 export const skills = [
   { group: 'Backend', items: ['Java', 'Spring Boot', 'REST APIs'] },
