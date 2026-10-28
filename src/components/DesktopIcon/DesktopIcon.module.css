@@ -1,0 +1,71 @@
+.icon {
+  background: transparent;
+  padding: 10px 6px;
+  width: 100px;
+  text-align: center;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.12s;
+  border: 1px solid transparent;
+  user-select: none;
+}
+
+.icon:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.icon.selected {
+  background: rgba(0, 120, 215, 0.35);
+  border: 1px solid rgba(0, 120, 215, 0.6);
+}
+
+.icon i {
+  font-size: 44px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.orchisIcon {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.appImageIcon {
+  display: inline-block;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.icon.large {
+  width: 120px;
+}
+
+.icon.large .orchisIcon {
+  width: 58px;
+  height: 58px;
+}
+
+.icon.large .appImageIcon {
+  width: 62px;
+  height: 62px;
+}
+
+.icon.large p {
+  font-size: 14px;
+}
+
+.icon p {
+  font-size: 13px;
+  color: white;
+  margin-top: 7px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+  line-height: 1.2;
+}
