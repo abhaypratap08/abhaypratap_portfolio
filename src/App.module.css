@@ -1,0 +1,56 @@
+.app {
+  height: 100vh;
+  height: 100dvh;
+  height: 100dvh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.boot,
+.shutdown {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 5000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  gap: 16px;
+  font-size: 15px;
+  animation: fadeOut 0.5s ease 0.85s forwards;
+}
+
+.shutdown {
+  animation: none;
+  z-index: 6000;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.bootRing {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.25);
+  border-top-color: #fff;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.bootText {
+  letter-spacing: 0.4px;
+  opacity: 0.9;
+}
