@@ -16,15 +16,22 @@ export default function Projects() {
           </h4>
           <div className={doc.stackLine}>{p.stack}</div>
           <ul>
-            {p.bullets.map((b) => (
+            {(p.bullets ?? []).map((b) => (
               <li key={b}>{b}</li>
             ))}
           </ul>
-          {p.github && (
+          {(p.github || p.live) && (
             <div className={doc.links}>
-              <a href={p.github} target="_blank" rel="noreferrer">
-                <i className="fa-brands fa-github" /> GitHub
-              </a>
+              {p.github && (
+                <a href={p.github} target="_blank" rel="noreferrer">
+                  <i className="fa-brands fa-github" /> GitHub
+                </a>
+              )}
+              {p.live && (
+                <a href={p.live} target="_blank" rel="noreferrer">
+                  <i className="fa-solid fa-arrow-up-right-from-square" /> Live
+                </a>
+              )}
             </div>
           )}
         </div>
