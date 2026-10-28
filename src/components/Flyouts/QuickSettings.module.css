@@ -1,0 +1,123 @@
+.flyout {
+  position: fixed;
+  top: 42px;
+  right: 10px;
+  width: 300px;
+  background: rgba(246, 246, 246, 0.92);
+  backdrop-filter: blur(24px) saturate(150%);
+  border-radius: 10px;
+  box-shadow: var(--shadow-flyout);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 16px;
+  z-index: 1500;
+  color: #222;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.tile {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 10px 6px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.12s;
+  border: 1px solid transparent;
+}
+
+.tile:hover {
+  background: rgba(0, 0, 0, 0.09);
+}
+
+.tile.active {
+  background: rgba(0, 120, 215, 0.15);
+  border-color: rgba(0, 120, 215, 0.4);
+}
+
+.tile i {
+  font-size: 17px;
+  display: block;
+  margin-bottom: 6px;
+  color: var(--accent);
+}
+
+.tile span {
+  font-size: 10.5px;
+  color: #333;
+}
+
+.sliderRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.sliderRow i {
+  width: 18px;
+  color: #444;
+  font-size: 14px;
+}
+
+.sliderRow input[type='range'] {
+  flex: 1;
+  accent-color: var(--accent);
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 6px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.powerButton {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  color: #333;
+  cursor: pointer;
+}
+
+.powerButton:hover {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.powerMenu {
+  position: absolute;
+  right: 0;
+  bottom: 42px;
+  min-width: 150px;
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  background: #f6f5f4;
+  box-shadow: var(--shadow-flyout);
+}
+
+.powerMenu button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: #292827;
+  text-align: left;
+  cursor: pointer;
+}
+
+.powerMenu button:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
